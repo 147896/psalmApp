@@ -1,6 +1,7 @@
-#PSalm APP to presentation the book's psalm's. Also, will send push notification that contains a Verse specifically.
-#The Chapter will be referenced when the Verse is sent.
-#The purpose of this App is to motivate you to read a psalm every day. Leaving your day a little better in this troubled world.
+``PSalm APP to presentation the book's psalm's. Also, will send push notification that contains a Verse specifically.
+The Chapter will be referenced when the Verse is sent.
+The purpose of this App is to motivate you to read a psalm every day. Leaving your day a little better in this troubled world.
+
 -------------------------------------------------------------------------------------------------------------------------------
 by Gabriel Ribas, Node.js and Python Developer.
 
