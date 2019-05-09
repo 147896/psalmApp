@@ -1,4 +1,4 @@
-## :pray: PSALM APP to presentation the book's psalm's.<br /> 
+## :pray: API PSALM APP to serve the book's psalm's app.<br /> 
 **Also, will send push notification that contains a Verse specifically.**<br />
 **The Chapter will be referenced when the Verse is sent.**<br />
 **The purpose of this App is to motivate you to read a psalm every day. Leaving your day a little better in this troubled world.**
