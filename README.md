@@ -4,7 +4,7 @@
 **The purpose of this App is to motivate you to read a psalm every day. Leaving your day a little better in this troubled world.**
 
 -------------------------------------------------------------------------------------------------------------------------------
-by Gabriel Ribas, Node.js and Python Developer.
+*by Gabriel Ribas, Node.js and Python Developer.*
 
 Basically this app was built with the following assumptions.:
 - What was needed to do before ?
@@ -12,7 +12,7 @@ Basically this app was built with the following assumptions.:
    2) The JSON file was imported into mongodb.
 
 - After ?
-   3) We define the data model in Node.js (mogoose) Salmo.js, for example.:
+   1) We define the data model in Node.js (mogoose) Salmo.js, for example.:
 
 ```
 const mongoose = require('../database');
@@ -29,7 +29,7 @@ const Salmo = mongoose.model('Salmo', SalmoSchema);
 module.exports = Salmo;
 ```
 
-   4) We created the routes in Noje.js (express module) to.:
+   2) We created the routes in Noje.js (express module) to.:
       - GET : Obtain all psalm book (chapter and verse).
       - GET : Obtain all verses the from a given chapter.
       - POST : Given a verse from a chapter specifically in the request body is returned. (In JSON format)
