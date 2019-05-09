@@ -50,9 +50,7 @@ router.get('/salmos/v/:id', async (req, res) => {
 
 router.post('/salmos/ver/:id', async (req, res) => {
    try {
-     //const id = await Salmo.find({"_id" : req.body.id},{verse: {$elemMatch : { "ID": req.body.verse.id }}});
      const id = await Salmo.find({"_id" : req.body._id},{verse: {$elemMatch : { "ID": req.body.ID }}});
-     console.log(req.body._id, req.body.ID)
      return res.send( { id } );
    } catch (err) {
      return res.status(400).send({ error: 'Salmos Failed' });
