@@ -14,7 +14,8 @@ Basically this app was built with the following assumptions.:
 - After ?
    3) We define the data model in Node.js (mogoose) Salmo.js, for example.:
 
-`const mongoose = require('../database');
+```
+const mongoose = require('../database');
 
 const SalmoSchema = new mongoose.Schema({
         ID: Number,
@@ -22,10 +23,11 @@ const SalmoSchema = new mongoose.Schema({
            ID: {type: Number},
            text: {type: String}
         }]
-});`
+});
 
 const Salmo = mongoose.model('Salmo', SalmoSchema);
-module.exports = Salmo;>
+module.exports = Salmo;
+```
 
    4) We created the routes in Noje.js (express module) to.:
       - GET : Obtain all psalm book (chapter and verse).
@@ -33,12 +35,14 @@ module.exports = Salmo;>
       - POST : Given a verse from a chapter specifically in the request body is returned. (In JSON format)
 
 Code example.:
-`router.get('/salmos/v/:id', async (req, res) => {
+```
+router.get('/salmos/v/:id', async (req, res) => {
    <try {
      const id = await Salmo.find({"_id" : req.params.id},{verse: {$elemMatch : { "ID": 1 }}});
      return res.send( { id } );
    } catch (err) {
      return res.status(400).send({ error: 'Salmos Failed' });
    }
-});`
+});
+```
  
