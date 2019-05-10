@@ -6,6 +6,15 @@
 -------------------------------------------------------------------------------------------------------------------------------
 *by Gabriel Ribas, Node.js and Python Developer.*
 
+**Required for this project.:**
+  - NodeJS 8.9.4 and modules, as:
+    - Express, mongoose, body-parser.
+    NOTE.: Despite the version of nodejs mentioned. Alternatively ``babel-node`` can be used if your version is not supported.
+           Need to install it. :) 
+  - Redis 	# to cache requests
+  - Mongo DB
+
+
 Basically this app was built with the following assumptions.:
 - What was needed to do before ?
    1) Firstly we used the Python to scraping the bibleon website in xml and convert to JSON format.
@@ -47,7 +56,7 @@ router.get('/salmos/v/:id', async (req, res) => {
 ```
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-APP PSalm git directoty struture.:
+APP PSalm git directory structure.:
 ```
 app-psalm 	# base project in node.js
 app-psalm.bkp   # backup
