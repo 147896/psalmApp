@@ -45,14 +45,45 @@ module.exports = Salmo;
 
 Code example.:
 ```
+// GET All
+router.get('/salmos', async (req, res) => {
+   try {
+     const all = await Salmo.find();
+        return res.send(all);
+   } catch (err) {
+     return res.status(400).send({ error: 'Salmos Failed' });
+   }
+});
+
+// GET chapter
+router.get('/salmos/:id', async (req, res) => {
+   try {
+     const id = await Salmo.find({"ID": req.params.id});
+        return res.send( { id } );
+   } catch (err) {
+     return res.status(400).send({ error: 'Salmos Failed' });
+   }
+});
+
+// GET verse
 router.get('/salmos/v/:id', async (req, res) => {
-   <try {
+   try {
      const id = await Salmo.find({"_id" : req.params.id},{verse: {$elemMatch : { "ID": 1 }}});
      return res.send( { id } );
    } catch (err) {
      return res.status(400).send({ error: 'Salmos Failed' });
    }
 });
+
+router.post('/salmos/ver/:id', async (req, res) => {
+   try {
+     const id = await Salmo.find({"_id" : req.body._id},{verse: {$elemMatch : { "ID": req.body.ID }}});
+     return res.send( { id } );
+   } catch (err) {
+     return res.status(400).send({ error: 'Salmos Failed' });
+   }
+});
+
 ```
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
