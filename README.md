@@ -9,8 +9,8 @@
 **Required for this project.:**
   - NodeJS 8.9.4 and modules, as:
     - Express, mongoose, body-parser.
-    NOTE.: Despite the version of nodejs mentioned. Alternatively ``babel-node`` can be used if your version is not supported.
-           Need to install it. :) 
+    - NOTE.: Despite the version of nodejs mentioned. Alternatively ``babel-node`` can be used if your version is not supported.<br />
+             Need to install it. :) 
   - Redis 	# to cache requests
   - Mongo DB
 
