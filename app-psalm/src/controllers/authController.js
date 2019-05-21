@@ -2,8 +2,8 @@ const express = require('express');
 
 const Salmo = require('../models/Salmo');
 
-const redis = require('redis');
-const client = redis.createClient();
+//const redis = require('redis');
+//const client = redis.createClient();
 
 const router = express.Router();
 
@@ -17,6 +17,7 @@ const router = express.Router();
      return res.status(400).send({ error: 'Registration Failed' });
    } 
 });*/
+
 
 // GET All
 router.get('/salmos', async (req, res) => {
@@ -48,9 +49,18 @@ router.get('/salmos/v/:id', async (req, res) => {
    }
 });
 
-router.post('/salmos/ver/:id', async (req, res) => {
+router.post('/salmos/ver', async (req, res) => {
    try {
      const id = await Salmo.find({"_id" : req.body._id},{verse: {$elemMatch : { "ID": req.body.ID }}});
+     return res.send( { id } );
+   } catch (err) {
+     return res.status(400).send({ error: 'Salmos Failed' });
+   }
+});
+
+router.post('/salmos/vers', async (req, res) => {
+   try {
+     const id = await Salmo.find({},{verse: {$elemMatch : { "ID": req.body.ID }}});
      return res.send( { id } );
    } catch (err) {
      return res.status(400).send({ error: 'Salmos Failed' });
