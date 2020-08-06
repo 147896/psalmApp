@@ -1,5 +1,6 @@
 orbs:
    aws-ecr: circleci/aws-ecr@6.12.2
+   aws-cli: circleci/aws-cli@1.2
 version: 2.1
 
 workflows:
@@ -474,6 +475,3 @@ jobs:
                 skip-when-tags-exist: <<parameters.skip-when-tags-exist>>
                 tag: <<parameters.tag>>
                 workspace-root: <<parameters.workspace-root>>
-orbs:
-    aws-cli: circleci/aws-cli@1.2
-version: 2.1
